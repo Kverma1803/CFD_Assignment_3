@@ -1,0 +1,14 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+system1 = GetSystem(Name="SYS 1")
+mesh1 = system1.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+system2 = GetSystem(Name="SYS 3")
+system2.Copy(KeepConnections=True)
+system3 = GetSystem(Name="SYS 4")
+mesh2 = system3.GetContainer(ComponentName="Mesh")
+mesh2.Edit()
+mesh1.Exit()
+mesh2.Exit()
+Save(Overwrite=True)

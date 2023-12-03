@@ -1,0 +1,19 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+system1 = GetSystem(Name="SYS 4")
+system1.DisplayText = "Copy of 28942"
+system1.Copy(KeepConnections=True)
+system2 = GetSystem(Name="SYS 5")
+mesh1 = system2.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+system2.DisplayText = "40874"
+mesh1.Exit()
+system2.Copy(KeepConnections=True)
+system3 = GetSystem(Name="SYS 6")
+mesh2 = system3.GetContainer(ComponentName="Mesh")
+mesh2.Edit()
+system3.DisplayText = "33313"
+mesh2.Exit()
+Save(Overwrite=True)
+Save(Overwrite=True)
